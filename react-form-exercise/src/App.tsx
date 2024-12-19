@@ -24,9 +24,7 @@ const App = () => {
     if (type === "checkbox") {
       const checked = (e.target as HTMLInputElement).checked
       setFormData(prevState => {
-        //console.log(prevState)
         const favoriteFoods = checked ? [...prevState.favoriteFoods, value] : prevState.favoriteFoods.filter(food => food !== value)
-        console.log(formData)
         return { ...prevState, favoriteFoods }
       })
     } else {
